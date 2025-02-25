@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import ipdb
+import pdb
 
-from lib.article import Article
-from lib.author import Author
-from lib.magazine import Magazine
+from article import Article
+from author import Author
+from magazine import Magazine
 
 if __name__ == '__main__':
     # Sample test data
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     article5 = author2.add_article(magazine1, "Mobile App Design")
     
     # Debug here
-    ipdb.set_trace()
+    pdb.set_trace()
     
     # Example debugging statements
     # print(f"Author1's name: {author1.name}")
