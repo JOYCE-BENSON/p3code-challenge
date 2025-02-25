@@ -2,8 +2,8 @@ class Article:
     all_articles = []
     
     def __init__(self, author, magazine, title):
-        from lib.author import Author
-        from lib.magazine import Magazine
+        from author import Author
+        from magazine import Magazine
         
         if not isinstance(title, str):
             raise ValueError("Title must be a string")
@@ -40,7 +40,7 @@ class Article:
     
     @author.setter
     def author(self, value):
-        from lib.author import Author
+        from author import Author
         if not isinstance(value, Author):
             raise ValueError("Author must be an instance of Author")
         self._author = value
@@ -51,7 +51,7 @@ class Article:
     
     @magazine.setter
     def magazine(self, value):
-        from lib.magazine import Magazine
+        from magazine import Magazine
         if not isinstance(value, Magazine):
             raise ValueError("Magazine must be an instance of Magazine")
         self._magazine = value
