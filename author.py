@@ -24,14 +24,14 @@ class Author:
             self._name = value
     
     def articles(self):
-        from lib.article import Article
+        from article import Article
         return [article for article in Article.all_articles if article.author == self]
     
     def magazines(self):
         return list(set(article.magazine for article in self.articles()))
     
     def add_article(self, magazine, title):
-        from lib.article import Article
+        from article import Article
         return Article(self, magazine, title)
     
     def topic_areas(self):
